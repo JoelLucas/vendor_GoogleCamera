@@ -1,0 +1,22 @@
+soong_namespace {
+	imports: [
+	],
+}
+
+android_app_import {
+	name: "GoogleCamera",
+	owner: "xiaomi",
+	apk: "proprietary/system/priv-app/GoogleCamera/GoogleCamera.apk",
+	overrides: [
+        "Aperture",
+        "Camera",
+        "Camera2",
+        "Snap",
+        "SnapdragonCamera"
+    ],
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+}
